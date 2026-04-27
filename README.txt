@@ -26,8 +26,6 @@ Ajout et suppression de produits du panier
 
 🌐Lien
 https://github.com/ChahdSghaier/Sghaier_Chahd_Simulateur_de_-panier_-e-commerce.git
-
-
 📚Nouveautés explorées
 
  Manipulation avancée du DOM
@@ -53,6 +51,8 @@ Organisation du code en fonctions pour simplifier la gestion des actions (calcul
 
 ✍️ SghaierChahd
 
+Lien du page web :
 
+https://chahdsghaier.github.io/Sghaier_Chahd_Simulateur_de_-panier_-e-commerce/
 
 
