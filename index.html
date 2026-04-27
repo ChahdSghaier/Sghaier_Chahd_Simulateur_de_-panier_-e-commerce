@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Éclat de toi</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Éclat de toi</h1>
+            <p class="card1">
+                <img src="bijou.jpg" >
+            </p>
+            <p class ="card2">
+                <img src="bijou1.jpg" >
+            </p>
+            <div class="search-bar">
+                <label for="recherche">RECHERCHER</label>
+                <input type="text" id="recherche" placeholder="rechercher un bijou...">
+                <p id="noResult" style="display:none;">Aucun produit trouvé</p>
+            </div>
+            <br><br>
+            <nav>
+                <a href="#">HOME</a>
+                <a href="#">ITEMS</a>
+                <a href="#">PROMOTIONS</a>
+                <a href="#">CONTACT</a>
+            </nav>
+        </header>
+        <br><br>
+        <section class="intro">
+            <h2>About us</h2>
+            <br>
+               <p class="into">Bienvenue chez Éclat de Toi, où chaque création est pensée avec amour et délicatesse.
+
+Ce qui a commencé comme une simple passion pour les accessoires s’est transformé en un univers raffiné dédié aux bijoux et aux essentiels du quotidien. Des pièces élégantes aux accessoires soigneusement conçus, chaque détail est imaginé pour sublimer votre style et révéler votre éclat naturel.
+
+Chaque création est là pour apporter une touche de douceur, de lumière et de confiance dans votre vie de tous les jours.</p>
+        <br><br>
+
+        
+         <p class="picture">
+                <img src="p1.jpg" width="50">
+                <img src="p2.jpg" width="50">
+                <img src="p3.jpg"width ="100">
+                <img src="p4.jpg"width="100">
+                <img src="p5.jpg"width="100">
+                <img src="p6.jpg"width="100">
+                <img src="p7.jpg"width="100">
+                <img src="p8.jpg"width="100">
+                
+
+
+         </p>
+        
+        <main>
+            <table border="1" id="tab">
+                <tr>
+                    <th>Article</th>
+                    <th>Nombre</th>
+                    <th>prix unitaire</th>
+                    <th>prix total</th>
+                </tr>
+                <tr>
+                    <td>bague</td>
+                    <td><input type="number" placeholder="0"></td>
+                    <td>10 dt</td>
+                    <td>0</td>
+                    <td><button type="button" onclick="supprimerLigne(this)">❌</button></td>
+                    
+                   
+                </tr>
+                <tr>
+                    <td>collier</td>
+                    <td><input type="number" placeholder="0"></td>
+                    <td>25 dt</td>
+                    <td>0</td>
+                    <td><button type="button" onclick="supprimerLigne(this)">❌</button></td>
+                   
+                </tr>
+                <tr>
+                    <td>boucle d'oreilles</td>
+                    <td><input type="number" placeholder="0"></td>
+                    <td>30 dt</td>
+                    <td>0</td>
+                    <td><button type="button" onclick="supprimerLigne(this)">❌</button></td>
+                    
+                </tr>
+                <tr>
+                    <td>bracelet</td>
+                    <td><input type="number" placeholder="0"></td>
+                    <td>50 dt</td>
+                    <td>0</td>
+                    <td><button type="button" onclick="supprimerLigne(this)">❌</button></td>
+                    
+                </tr>
+                <tr>
+                    <td>sac</td>
+                    <td><input type="number" placeholder="0"></td>
+                    <td>120 dt</td>
+                    <td>0</td>
+                    <td><button type="button" onclick="supprimerLigne(this)">❌</button></td>
+                    
+                </tr>
+                <tr>
+                    <td>trousse de maquillage</td>
+                    <td><input type="number" placeholder="0"></td>
+                    <td>20 dt</td>
+                    <td>0</td>
+                    <td><button type="button" onclick="supprimerLigne(this)">❌</button></td>
+                    
+                </tr>
+                <tr>
+                    <td>lunette solaire</td>
+                    <td><input type="number" placeholder="0"></td>
+                    <td>30 dt</td>
+                    <td>0</td>
+                    <td><button type="button" onclick="supprimerLigne(this)">❌</button></td>
+                    
+                </tr>
+                <tr>
+                    <td>montre</td>
+                    <td><input type="number" placeholder="0"></td>
+                    <td>180 dt</td>
+                    <td>0</td>
+                    <td><button type="button" onclick="supprimerLigne(this)">❌</button></td>
+                    
+                </tr>
+
+                <tr>
+                    <td colspan="3" >Prix total à payer</td>
+                    <td>0</td>
+                    <td><button type="button" onclick="supprimerLigne(this)">❌</button></td>
+                </tr>
+
+
+
+            </table>
+            
+            <br>
+
+            <button onclick="calculer()">Calculer</button>
+            <button onclick="resetPanier()">Reset</button>
+            <section class="zone-client">
+
+    
+    <div class="form-box">
+        <h3>Infos client</h3>
+
+        <form id="formCommande">
+            <input type="text" id="nom" placeholder="Nom" required><br>
+            <input type="text" id="prenom" placeholder="Prénom" required><br>
+            <input type="tel" id="tel" placeholder="+216XXXXXXXX" required><br>
+            <textarea id="adresse" placeholder="Adresse"></textarea><br>
+
+            <button type="submit">Valider</button>
+        </form>
+    </div>
+
+    
+    <div class="resume-box">
+        <h3>Résumé</h3>
+
+        <p><strong>Nom :</strong> <span id="r_nom"></span></p>
+        <p><strong>Prénom :</strong> <span id="r_prenom"></span></p>
+        <p><strong>Téléphone :</strong> <span id="r_tel"></span></p>
+        <p><strong>Adresse :</strong> <span id="r_adresse"></span></p>
+        <p><strong>Total :</strong> <span id="r_total"></span></p>
+    </div>
+
+</section>
+        </main>
+        <br><br>
+        <footer>
+            <p class="livraison">
+                <img src="p10.jpg" width="300">
+                <h2>livraison à domicile </h2>
+                <h3>livraison gratruite à partir de 99dt</h3>
+
+
+            </p>  
+        </footer>
+        <section class="footer-site">
+    <div class="footer-container">
+        <div class="footer-box">
+            <h4>Éclat de toi</h4>
+            <p>Révélez votre éclat avec nos bijoux artisanaux conçus avec amour et délicatesse.</p>
+            <div class="socials">
+                <span>Instagram</span> | <span>Facebook</span>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Contact</h4>
+            <p>📍 Hammamet, Tunisie</p>
+            <p>📞 +216 22 000 000</p>
+            <p>✉️ contact@eclatdetoi.tn</p>
+        </div>
+
+        <div class="footer-box">
+            <h4>Newsletter</h4>
+            <p>Inscrivez-vous pour nos nouvelles collections.</p>
+            <form class="news-form">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">OK</button>
+                
+            </form>
+        </div>
+    </div>
+    </section>
+
+
+    
+    <div class="footer-copyright">
+        <p>&copy; 2026 Éclat de toi. Tous droits réservés.</p>
+    </div>
+
+
+     <script src ="script.js"></script>  
+     <button id="btnTop" onclick="remonter()">⬆</button> 
+    </body>
+</html>
